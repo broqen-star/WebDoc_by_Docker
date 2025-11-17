@@ -1,14 +1,19 @@
+# 概要
 Obsidian で作成したコンテンツをwebサイトで公開するための Docker 環境。
 構築をインターネット環境で行い、運用はクローズドネットワークで運用する想定。
 
-使用するコンテナ
+
+# 使っているもの
 - Gitea
 - Gitea Act Runner
 - Postgre
 - Nginx
+- MkDocs
 
-初期設定
-- git clone
+# 初期設定
+- Docker Engine のインストールが完了していること
+- git clone https://github.com/broqen-star/WebDoc_by_Docker.git
+- cd WebDoc_by_Docker.git
 - docker compose build
 - . generate-env.sh
 - docker compose up -d
