@@ -1,0 +1,14 @@
+FROM gitea/act_runner:latest
+
+RUN apk add --no-cache nodejs npm
+
+# Python3 と pip を追加
+RUN apk add --no-cache python3 py3-pip
+
+# venv を作成して mkdocs-material をインストール
+RUN python3 -m venv /opt/venv \
+    && . /opt/venv/bin/activate \
+    && pip install --no-cache-dir mkdocs-material mkdocs-wikilinks-plugin
+
+# venv の bin を PATH に追加
+ENV PATH="/opt/venv/bin:$PATH"

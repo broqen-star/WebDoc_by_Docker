@@ -1,0 +1,14 @@
+# 環境変数ファイル（サンプルは管理対象にする）
+.env
+
+# 永続化データ
+gitea/
+postgres/
+runner_data/
+
+# MkDocs のビルド成果物
+site/
+
+# その他不要ファイル
+*.log
+*.tmp
