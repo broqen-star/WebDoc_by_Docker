@@ -15,6 +15,8 @@ Obsidian で作成したコンテンツをwebサイトで公開するための D
 - git clone https://github.com/broqen-star/WebDoc_by_Docker.git
 - cd WebDoc_by_Docker.git
 - docker compose build
-- . generate-env.sh
 - docker compose up -d
 - web UI の初期セットアップを済ませる
+- . generate-env.sh
+- docker compose down -v
+- docker compose up -d
